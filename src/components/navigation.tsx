@@ -9,6 +9,7 @@ export default function Navigation() {
       </div>
       <div className="flex gap-4">
         <SignInButton mode="modal" />
+        <Link href="/user-profile">Profile</Link>
         <SignOutButton />
       </div>
     </section>
