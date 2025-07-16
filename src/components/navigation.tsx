@@ -3,9 +3,11 @@ import {
   SignedOut,
   SignInButton,
   SignOutButton,
-//   UserButton,
+  SignUpButton,
+  //   UserButton,
 } from "@clerk/nextjs";
 import Link from "next/link";
+import Button from "./button";
 
 export default function Navigation() {
   return (
@@ -16,15 +18,22 @@ export default function Navigation() {
       <nav className="flex gap-5">
         <Link href="/admin">Admin</Link>
       </nav>
-      <div className="flex gap-4">
+      <div className="flex gap-2">
         <SignedIn>
           {/* <UserButton /> */}
           <Link href="/user-profile">Profile</Link>
-          <SignOutButton />
+          <SignOutButton>
+            <Button>Sign out</Button>
+          </SignOutButton>
         </SignedIn>
 
         <SignedOut>
-          <SignInButton mode="modal" />
+          <SignInButton>
+            <Button>Sign in</Button>
+          </SignInButton>
+          <SignUpButton>
+            <Button>Sing up</Button>
+          </SignUpButton>
         </SignedOut>
       </div>
     </section>
