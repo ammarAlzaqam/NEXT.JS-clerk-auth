@@ -13,6 +13,9 @@ export default function Navigation() {
       <div className="font-semibold text-xl">
         <Link href="/">Clerk App</Link>
       </div>
+      <nav className="flex gap-5">
+        <Link href="/admin">Admin</Link>
+      </nav>
       <div className="flex gap-4">
         <SignedIn>
           {/* <UserButton /> */}
